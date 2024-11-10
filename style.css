@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  overflow: hidden;
+}
+
+#game {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  display: block;
+}
+
+#time-left, #points {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#time-left {
+  top: 20px;
+  left: 20px;
+}
+
+#points {
+  top: 20px;
+  right: 20px;
+}
+
+#score, #timer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#how-to, #over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#over-screen {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #ebe418;
+}
+
+@media (max-width: 768px) {
+  #score, #timer {
+    font-size: 1.2rem;
+  }
+
+  #how-to {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  #over-screen {
+    width: 80%;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  #score, #timer {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  #how-to {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  #over-screen {
+    width: 90%;
+    padding: 30px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
